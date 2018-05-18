@@ -1,0 +1,51 @@
+<h2>Stats for <!-- Player name --></h2>
+
+
+<h3>Overall Stats</h3>
+<table id="overall">
+  <thead>
+    <tr>
+      <th scope="col">Matches Played:</th>
+      <th scope="col">Average Placement:</th>
+      <th scope="col">Number of Wins:</th>
+      <th scope="col">Total Showdown Points:</th>
+      <th scope="col">Total Eliminations:</th>
+    </tr>
+  </thead>
+  <tbody>
+    <!--
+     Iterate through overall_data to list 
+     in table rows.
+    -->
+  </tbody>
+</table>
+
+<h3>Match Stats</h3>
+<table id="match">
+  <thead>
+    <tr>
+      <th scope="col">Match Number</th>
+      <th scope="col">Placement</th>
+      <th scope="col">Showdown Points</th>
+      <th scope="col">Eliminations</th>
+    </tr>
+  </thead>
+  <tbody>
+    <!--
+      Iterate through match stats to list
+      in table rows
+    -->
+  </tbody>
+</table>
+
+<% content_for :header_links do %>
+  <a class="header-link add" href="/players/<%= player_id %>/add_match">Add Match Data</a>
+<% end %>
+
+<% content_for :header_links do %>
+  <a class="header-link" href="/players">Players List</a>
+<% end %>
+
+<% content_for :header_links do %>
+  <a class="header-link" href="/players/leaderboard">Leaderboard</a>
+<% end %>

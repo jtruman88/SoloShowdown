@@ -1,0 +1,21 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <title>your page title goes here</title>
+    <meta charset="utf-8" />
+    <link rel="stylesheet" href="/stylesheets/style.css">
+  </head>
+  <body>
+    <main>
+      <header>
+        <h1>Solo Showdown Tracker</h1>
+        <nav>
+          <%== yield_content :header_links %>
+        </nav>
+      </header>
+      <section>
+        <%== yield %>
+      </section>
+    </main>
+  </body>
+</html>
