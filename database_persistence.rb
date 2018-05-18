@@ -114,7 +114,7 @@ class DatabasePersistence
     if Sinatra::Base.production?
       PG.connect(ENV['DATABASE_URL'])
     else
-      PG.connect(dbname: "solo_showdown")
+      PG.connect(dbname: "solo_test")
     end
   end
   

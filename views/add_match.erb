@@ -2,10 +2,10 @@
 
 <form action="/players/<%= @player_id %>/add" method="post">
   <label for="placement">Placement:</label>
-  <input name="placement" placeholder="Place finished" type="text" value="">
+  <input class="match-input" name="placement" placeholder="Place finished" type="text" value="">
   <br>
   <label for="eliminations">Eliminations:</label>
-  <input name="eliminations" placeholder="Eliminations" type="text" value="">
+  <input class="match-input" name="eliminations" placeholder="Eliminations" type="text" value="">
   <br>
   <input class="button" type="submit" value="Add Data">
   <a href="/players/<%= @player_id %>">Cancel</a>

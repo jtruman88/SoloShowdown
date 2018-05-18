@@ -49,23 +49,24 @@ html {
 header {
   background-color: blue;
   color: white;
-  height: 60px;
+  height: 150px;
 }
 
 h1 {
-  font-size: 1.5rem;
-  padding-top: 5px;
+  font-size: 4rem;
+  padding-top: 15px;
   text-align: center;
 }
 
 #messages {
   margin: 20px 0;
+  font-size: 3rem;
   text-align: center;
 }
 
 .flash {
   color: white;
-  height: 20px;
+  height: 100%px;
   margin: 0 auto;
   padding-top: 10px;
   width: 75%;
@@ -80,7 +81,8 @@ h1 {
 }
 
 nav {
-  padding-top: 6px;
+  font-size: 2.5rem;
+  padding-top: 12px;
   text-align: center;
 }
 
@@ -99,16 +101,16 @@ a.header-link:active {
 }
 
 #content {
-  margin: 0 10px;
+  margin: 40px 10px;
 }
 
 h2 {
-  font-size: 1.2rem;
+  font-size: 3rem;
   text-decoration: underline;
 }
 
 form {
-  margin-top: 10px;
+  margin-top: 40px;
 }
 
 ul {
@@ -118,8 +120,9 @@ ul {
 ul a {
   background-color: blue;
   color: white;
+  font-size: 2.5rem;
   display: inline-block;
-  padding: 10px;
+  padding: 20px;
   text-decoration: none;
   width: 100%;
 }
@@ -137,27 +140,50 @@ ul li {
 table {
   border: 1px solid black;
   border-collapse: collapse;
-  font-size: 0.5rem;
+  font-size: 2.5rem;
   margin-top: 10px;
 }
 
 th,
 td {
   border-bottom: 1px solid black;
-  padding: 5px;
+  padding: 15px 5px 10px 5px;
   text-align: center;
 }
 
+
 h3 {
   color: blue;
+  font-size: 2rem;
   margin-top: 20px;
   text-decoration: underline;
 }
 
 label {
   display: inline-block;
+  font-size: 3rem;
   text-align: right;
-  width: 110px;
+  width: 120px;
+}
+
+.match-input {
+  border: 5px solid blue;
+  border-radius: 10px;
+  display: inline-block;
+  font-size: 2.5rem;
+  margin-left: 220px;
+  margin-bottom: 20px;
+}
+
+.player-label {
+  text-align: left;
+  width: 350px;
+}
+
+.player-input {
+  border: 5px solid blue;
+  border-radius: 10px;;
+  font-size: 2.5rem;
 }
 
 input.button {
@@ -165,5 +191,11 @@ input.button {
   border-radius: 10px;
   color: white;
   font: inherit;
+  font-size: 2.8rem;
   padding: 10px;
+}
+
+form a {
+  font-size: 2.5rem;
+  margin-left: 25px;
 }
