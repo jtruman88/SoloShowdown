@@ -3,15 +3,28 @@
 <table>
   <thead>
     <tr>
-      <th>Player Name</th>
-      <th>Matches Played</th>
-      <th>Number of Wins</th>
-      <th>Aversge Placement</th>
-      <th>Total Showdown Points</th>
-      <th>Eliminations</th>
-      <th>Average Eliminations</th>
+      <th scope="col">Player Name</th>
+      <th scope="col">Matches Played</th>
+      <th scope="col">Number of Wins</th>
+      <th scope="col">Aversge Placement</th>
+      <th scope="col">Total Showdown Points</th>
+      <th scope="col">Eliminations</th>
+      <th scope="col">Average Eliminations</th>
     </tr>
   </thead>
+  <tbody>
+    <% @players_data.each do |stats| %>
+      <tr>
+        <th scope="row"><%= stats[:name] %></th>
+        <td><%= stats[:matches] %></td>
+        <td><%= stats[:wins] %></td>
+        <td><%= stats[:avg_place] %></td>
+        <td><%= stats[:points] %></td>
+        <td><%= stats[:total_elim] %></td>
+        <td><%= stats[:avg_elim] %></td>
+      </tr>
+    <% end %>
+  </tbody>
 </table>
 
 <% content_for :header_links do %>

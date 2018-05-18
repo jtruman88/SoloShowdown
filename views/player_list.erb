@@ -1,16 +1,17 @@
 <h2>Players</h2>
 
-<!--
-Iterate through @data to list player names as links to
-individual player page
--->
+<ul>
+  <% @players.each do |player| %>
+    <li>
+      <a href="/players/<%= player[:id] %>"><%= player[:name] %></a>
+    </li>
+  <% end %>
+</ul>
 
 <form action="/player" method="post">
   <label for="player_name">Player name:</label>
   <input name="player_name" placeholder="Name" type="text" value="">
-  <fieldset class="actions">
-    <input type="submit" value="Add Player">
-  </fieldset>
+  <input class="button" type="submit" value="Add Player">
 </form>
 
 <% content_for :header_links do %>

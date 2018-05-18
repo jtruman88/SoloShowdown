@@ -13,7 +13,20 @@
           <%== yield_content :header_links %>
         </nav>
       </header>
-      <section>
+      <section id="messages">
+        <% if session[:success] %>
+          <div class="flash success">
+            <p><%= session.delete(:success) %></p>
+          </div>
+        <% end %>
+
+        <% if session[:error] %>
+          <div class="flash error">
+            <p><%= session.delete(:error) %></p>
+          </div>
+        <% end %>
+      </section>      
+      <section id="content">
         <%== yield %>
       </section>
     </main>

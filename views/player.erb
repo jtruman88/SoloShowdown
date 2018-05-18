@@ -1,4 +1,4 @@
-<h2>Stats for <!-- Player name --></h2>
+<h2>Stats for <%= @player_name %></h2>
 
 
 <h3>Overall Stats</h3>
@@ -6,17 +6,24 @@
   <thead>
     <tr>
       <th scope="col">Matches Played:</th>
-      <th scope="col">Average Placement:</th>
       <th scope="col">Number of Wins:</th>
+      <th scope="col">Average Placement:</th>
       <th scope="col">Total Showdown Points:</th>
       <th scope="col">Total Eliminations:</th>
+      <th scope="col">Average Eliminations:</th>
     </tr>
   </thead>
   <tbody>
-    <!--
-     Iterate through overall_data to list 
-     in table rows.
-    -->
+    <% @overall_stats.each do |stats| %>
+      <tr>
+        <td><%= stats[:matches] %></td>
+        <td><%= stats[:wins] %></td>
+        <td><%= stats[:avg_place] %></td>
+        <td><%= stats[:points] %></td>
+        <td><%= stats[:total_elim] %></td>
+        <td><%= stats[:avg_elim] %></td>
+      </tr>
+    <% end %>
   </tbody>
 </table>
 
@@ -31,15 +38,19 @@
     </tr>
   </thead>
   <tbody>
-    <!--
-      Iterate through match stats to list
-      in table rows
-    -->
+    <% @match_stats.each_with_index do |match, ind| %>
+      <tr>
+        <th scope="row"><%= (ind + 1) %></th>
+        <td><%= match[:place] %></td>
+        <td><%= match[:points] %></td>
+        <td><%= match[:elims] %></td>
+      </tr>
+    <% end %>
   </tbody>
 </table>
 
 <% content_for :header_links do %>
-  <a class="header-link add" href="/players/<%= player_id %>/add_match">Add Match Data</a>
+  <a class="header-link add" href="/players/<%= @player_id %>/add_match">Add Match Data</a>
 <% end %>
 
 <% content_for :header_links do %>
